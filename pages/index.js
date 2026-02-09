@@ -36,9 +36,8 @@ const addTodoPopup = new PopupWithForm({
     const id = uuidv4();
 
     const values = { name, date, id };
-    renderTodo(values);
-    const newTodo = { name, date, id };
-    renderTodo(newTodo);
+    renderTodo(values); // Called only once
+    todoCounter.updateTotal(true); // Updates the counter
     addTodoPopup.close();
     newTodoValidator.resetValidation();
   },

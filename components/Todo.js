@@ -33,7 +33,7 @@ class Todo {
   }
 
   _toggleCompletion = () => {
-    this._completed = !this._completed;
+    this._data.completed = !this._data.completed; // Update the data object
   };
 
   _remove = () => {
